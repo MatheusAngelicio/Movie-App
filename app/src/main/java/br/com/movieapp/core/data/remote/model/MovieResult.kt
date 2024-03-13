@@ -6,8 +6,8 @@ data class MovieResult(
     @SerializedName("adult")
     val adult: Boolean,
 
-    @SerializedName("backdropPath")
-    val backdrop_path: String,
+    @SerializedName("backdrop_path")
+    val backdropPath: String,
 
     @SerializedName("genreIds")
     val genre_ids: List<Int>,
@@ -15,11 +15,11 @@ data class MovieResult(
     @SerializedName("id")
     val id: Int,
 
-    @SerializedName("originalLanguage")
-    val original_language: String,
+    @SerializedName("original_language")
+    val originalLanguage: String,
 
-    @SerializedName("originalTitle")
-    val original_title: String,
+    @SerializedName("original_title")
+    val originalTitle: String,
 
     @SerializedName("overview")
     val overview: String,
@@ -27,8 +27,8 @@ data class MovieResult(
     @SerializedName("popularity")
     val popularity: Double,
 
-    @SerializedName("posterPath")
-    val poster_path: String,
+    @SerializedName("poster_path")
+    val posterPath: String,
 
     @SerializedName("releaseDate")
     val release_date: String,
@@ -39,9 +39,9 @@ data class MovieResult(
     @SerializedName("video")
     val video: Boolean,
 
-    @SerializedName("voteAverage")
-    val vote_average: Double,
+    @SerializedName("vote_average")
+    val voteAverage: Double,
 
-    @SerializedName("voteCount")
-    val vote_count: Int
+    @SerializedName("vote_count")
+    val voteCount: Int
 )

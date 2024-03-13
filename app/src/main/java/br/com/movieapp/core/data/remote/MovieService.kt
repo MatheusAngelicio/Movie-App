@@ -1,6 +1,5 @@
 package br.com.movieapp.core.data.remote
 
-import android.app.appsearch.SearchResult
 import br.com.movieapp.core.data.remote.reponse.MovieDetailReponse
 import br.com.movieapp.core.data.remote.reponse.MovieResponse
 import retrofit2.http.GET
