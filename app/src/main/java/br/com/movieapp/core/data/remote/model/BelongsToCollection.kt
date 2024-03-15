@@ -3,8 +3,8 @@ package br.com.movieapp.core.data.remote.model
 import com.google.gson.annotations.SerializedName
 
 data class BelongsToCollection(
-    @SerializedName("backdropPath")
-    val backdrop_path: String,
+    @SerializedName("backdrop_path")
+    val backdropPath: String,
 
     @SerializedName("id")
     val id: Int,
@@ -12,6 +12,6 @@ data class BelongsToCollection(
     @SerializedName("name")
     val name: String,
 
-    @SerializedName("posterPath")
-    val poster_path: String
+    @SerializedName("poster_path")
+    val posterPath: String
 )

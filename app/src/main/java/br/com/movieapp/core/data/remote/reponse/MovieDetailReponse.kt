@@ -11,11 +11,11 @@ data class MovieDetailReponse(
     @SerializedName("adult")
     val adult: Boolean,
 
-    @SerializedName("backdropPath")
-    val backdrop_path: String,
+    @SerializedName("backdrop_path")
+    val backdropPath: String,
 
-    @SerializedName("belongsToCollection")
-    val belongs_to_collection: BelongsToCollection,
+    @SerializedName("belongs_to_collection")
+    val belongsToCollection: BelongsToCollection,
 
     @SerializedName("budget")
     val budget: Int,
@@ -29,14 +29,14 @@ data class MovieDetailReponse(
     @SerializedName("id")
     val id: Int,
 
-    @SerializedName("imdbId")
-    val imdb_id: String,
+    @SerializedName("imdb_id")
+    val imdbId: String,
 
-    @SerializedName("originallanguage")
-    val original_language: String,
+    @SerializedName("original_language")
+    val originalLanguage: String,
 
-    @SerializedName("originalTitle")
-    val original_title: String,
+    @SerializedName("original_title")
+    val originalTitle: String,
 
     @SerializedName("overview")
     val overview: String,
@@ -44,17 +44,17 @@ data class MovieDetailReponse(
     @SerializedName("popularity")
     val popularity: Double,
 
-    @SerializedName("posterPath")
-    val poster_path: String,
+    @SerializedName("poster_path")
+    val posterPath: String,
 
-    @SerializedName("productionCompanies")
-    val production_companies: List<ProductionCompany>,
+    @SerializedName("production_companies")
+    val productionCompanies: List<ProductionCompany>,
 
-    @SerializedName("productionCountries")
-    val production_countries: List<ProductionCountry>,
+    @SerializedName("production_countries")
+    val productionCountries: List<ProductionCountry>,
 
-    @SerializedName("releaseDate")
-    val release_date: String,
+    @SerializedName("release_date")
+    val releaseDate: String,
 
     @SerializedName("revenue")
     val revenue: Long,
@@ -62,8 +62,8 @@ data class MovieDetailReponse(
     @SerializedName("runtime")
     val runtime: Int,
 
-    @SerializedName("spokenLanguages")
-    val spoken_languages: List<SpokenLanguage>,
+    @SerializedName("spoken_languages")
+    val spokenLanguages: List<SpokenLanguage>,
 
     @SerializedName("status")
     val status: String,
@@ -77,9 +77,9 @@ data class MovieDetailReponse(
     @SerializedName("video")
     val video: Boolean,
 
-    @SerializedName("voteAverage")
-    val vote_average: Double,
+    @SerializedName("vote_average")
+    val voteAverage: Double,
 
-    @SerializedName("voteCount")
-    val vote_count: Int
+    @SerializedName("vote_count")
+    val voteCount: Int
 )

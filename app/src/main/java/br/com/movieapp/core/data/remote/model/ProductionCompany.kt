@@ -6,12 +6,12 @@ data class ProductionCompany(
     @SerializedName("id")
     val id: Int,
 
-    @SerializedName("logoPath")
-    val logo_path: String,
+    @SerializedName("logo_path")
+    val logoPath: String,
 
     @SerializedName("name")
     val name: String,
 
-    @SerializedName("originCountry")
-    val origin_country: String
+    @SerializedName("origin_country")
+    val originCountry: String
 )

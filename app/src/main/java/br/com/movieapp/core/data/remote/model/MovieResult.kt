@@ -9,8 +9,8 @@ data class MovieResult(
     @SerializedName("backdrop_path")
     val backdropPath: String,
 
-    @SerializedName("genreIds")
-    val genre_ids: List<Int>,
+    @SerializedName("genre_ids")
+    val genreIds: List<Int>,
 
     @SerializedName("id")
     val id: Int,
@@ -30,8 +30,8 @@ data class MovieResult(
     @SerializedName("poster_path")
     val posterPath: String,
 
-    @SerializedName("releaseDate")
-    val release_date: String,
+    @SerializedName("release_date")
+    val releaseDate: String,
 
     @SerializedName("title")
     val title: String,
