@@ -28,7 +28,7 @@ fun SearchComponent(
     modifier: Modifier = Modifier,
     query: String,
     onSearch: (String) -> Unit,
-    onQueryChangeEvent: (MovieSearchEvent) -> Unit
+    onQueryChangeEvent: (MovieSearchEvent) -> Unit,
 ) {
     OutlinedTextField(
         value = query,
