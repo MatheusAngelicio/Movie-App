@@ -7,13 +7,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import br.com.movieapp.movie_popular.presentation.MoviePopularScreen
 import br.com.movieapp.movie_popular.presentation.viewModel.MoviePopularViewModel
+import br.com.movieapp.search_movie.presentation.MovieSearchEvent
+import br.com.movieapp.search_movie.presentation.MovieSearchScreen
+import br.com.movieapp.search_movie.presentation.viewModel.MovieSearchViewModel
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
         startDestination = BottomNavItem.MoviePopular.route
-        ) {
+    ) {
         composable(BottomNavItem.MoviePopular.route) {
 
             // hiltViewModel > para recuperar a instancia do viewModel que é criada e gerenciada pelo hilt
@@ -26,6 +29,19 @@ fun NavigationGraph(navController: NavHostController) {
 
         }
         composable(BottomNavItem.MovieSearch.route) {
+
+            val viewModel: MovieSearchViewModel = hiltViewModel()
+            val uiState = viewModel.uiState
+            val onEvent: (MovieSearchEvent) -> Unit = viewModel::event
+            val onFetch: (String) -> Unit = viewModel::fetch
+
+
+            MovieSearchScreen(
+                uiState = uiState,
+                onEvent = onEvent,
+                onFetch = onFetch,
+                navigateToDetailMovie = {},
+            )
 
         }
         composable(BottomNavItem.MovieFavorite.route) {
