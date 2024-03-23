@@ -62,12 +62,18 @@ fun SearchContent(
         )
         Spacer(modifier = Modifier.height(12.dp))
 
+
+        if (isLoading) {
+            LoadingView()
+        }
+
+
         // aqui eu monto a lista
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
             contentPadding = paddingValues,
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
-            verticalArrangement = Arrangement.Center,
+            verticalArrangement = Arrangement.Top,
             modifier = Modifier.fillMaxSize(),
         ) {
             items(pagingMovies.itemCount) { index ->
@@ -79,24 +85,12 @@ fun SearchContent(
                         imageUrl = it.imageUrl
                     ) { movieId ->
                         onDetail(movieId)
-
                     }
                 }
                 isLoading = false
             }
             pagingMovies.apply {
-                when {
-                    isLoading -> {
-                        item(
-                            span = {
-                                GridItemSpan(maxLineSpan)
-                            }
-                        ) {
-                            LoadingView()
-                        }
 
-                    }
-                }
                 when {
                     loadState.refresh is LoadState.Error || loadState.append is LoadState.Error -> {
                         isLoading = false
