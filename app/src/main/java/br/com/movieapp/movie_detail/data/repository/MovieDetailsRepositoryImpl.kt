@@ -15,7 +15,7 @@ class MovieDetailsRepositoryImpl @Inject constructor(
 ) : MovieDetailsRepository {
 
     override suspend fun getMovieDetails(movieId: Int): MovieDetails {
-        remoteDataSource.getMovieDetails(movieId)
+       return remoteDataSource.getMovieDetails(movieId)
     }
 
     override suspend fun getMoviesSimilar(
