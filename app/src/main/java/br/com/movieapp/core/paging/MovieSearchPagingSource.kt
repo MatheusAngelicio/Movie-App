@@ -3,6 +3,7 @@ package br.com.movieapp.core.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import br.com.movieapp.core.domain.model.Movie
+import br.com.movieapp.core.util.Constants.LIMIT_PAGE_MOVIE
 import br.com.movieapp.movie_popular.data.mapper.toMovie
 import br.com.movieapp.search_movie.domain.source.MovieSearchRemoteDataSource
 import retrofit2.HttpException
@@ -17,7 +18,7 @@ class MovieSearchPagingSource(
         // boilerplate
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
-            anchorPage?.prevKey?.plus(LIMIT) ?: anchorPage?.nextKey?.minus(LIMIT)
+            anchorPage?.prevKey?.plus(LIMIT_PAGE_MOVIE) ?: anchorPage?.nextKey?.minus(LIMIT_PAGE_MOVIE)
         }
     }
 
@@ -47,10 +48,4 @@ class MovieSearchPagingSource(
             return LoadResult.Error(e)
         }
     }
-
-    companion object {
-        private const val LIMIT = 20
-    }
-
-
 }
