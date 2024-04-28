@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import br.com.movieapp.ui.theme.white
 
 @Composable
-fun GenreTag(genre: String) {
+fun MovieDetailGenreTag(genre: String) {
     Box (modifier = Modifier
         .border(
             width = 1.dp,
@@ -36,6 +36,6 @@ fun GenreTag(genre: String) {
 
 @Preview(showBackground = true, backgroundColor = 0)
 @Composable
-private fun GenreTagPreview() {
-    GenreTag(genre = "Aventura")
+private fun MovieDetailGenreTagPreview() {
+    MovieDetailGenreTag(genre = "Aventura")
 }
