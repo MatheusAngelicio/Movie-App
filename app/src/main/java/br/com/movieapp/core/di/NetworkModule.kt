@@ -77,6 +77,4 @@ object NetworkModule {
             .create(MovieService::class.java)
 
     }
-
-
 }
