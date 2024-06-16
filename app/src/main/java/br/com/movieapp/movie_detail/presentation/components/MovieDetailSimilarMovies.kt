@@ -23,7 +23,7 @@ fun MovieDetailSimilarMovies(
         columns = GridCells.Fixed(3),
         horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.Center,
-        //modifier = Modifier.fillMaxSize()
+        modifier = modifier
     ) {
         items(pagingMoviesSimilar.itemCount) { index ->
             val movie = pagingMoviesSimilar[index]

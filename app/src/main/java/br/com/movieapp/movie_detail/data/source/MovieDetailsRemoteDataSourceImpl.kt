@@ -30,7 +30,7 @@ class MovieDetailsRemoteDataSourceImpl @Inject constructor(
     }
 
     override suspend fun getMoviesSimilar(page: Int, movieId: Int): MovieResponse {
-        return service.getMoviesSimilar(page, movieId)
+        return service.getMoviesSimilar(movieId, page)
     }
 
     override fun getSimilarMoviesPagingSource(movieId: Int): MovieSimilarPagingSource {
